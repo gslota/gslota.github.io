@@ -5,8 +5,8 @@ html {
 body {
   background-color: #ffffff;
   font: Impact, Charcoal, sans-serif;
-  width: 80%;
-  min-width: 35em;
+  width: min(90%, 55em);
+  min-width: 0;
   max-width: 55em;
   margin: 0 auto;
   font-weight: 200;
