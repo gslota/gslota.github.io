@@ -1,0 +1,65 @@
+html {
+  /*    background: @page-background;*/
+
+}
+body {
+  background-color: #ffffff;
+  font: Impact, Charcoal, sans-serif;
+  width: 80%;
+  min-width: 35em;
+  max-width: 55em;
+  margin: 0 auto;
+  font-weight: 200;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+/*#fff;*/
+div[role=main] {
+  background: #fff;
+  padding: 2em;
+  margin: 0 auto;
+}
+div[role=main] img {
+  position: relative;
+  /*        width: 100%;*/
+
+}
+#self {
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+#self h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.4em;
+}
+#self img {
+  width: 10em;
+  float: left;
+  margin-right: 2em;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.75em;
+}
+h1 {
+  font-size: 3em;
+  margin: 0.5em 0 0 0;
+  padding: 0;
+}
+h2,
+h3 {
+  padding: 0;
+  margin-bottom: 0.3em;
+}
+p,
+dl,
+ol,
+ul {
+  margin-top: 0;
+}

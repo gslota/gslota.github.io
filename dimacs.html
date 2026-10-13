@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>George M. Slota</title>
+<link rel="stylesheet" type="text/css" media="screen" href="normalize.css"/>
+<link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
+<link rel="stylesheet" type="text/css" media="screen" href="site.css"/>
+</head>
+
+<body>
+
+<div id="header">
+<h2>DIMACS13 Generative Benchmarks</h2>
+<h3>Assignment Problem and Bipartite Matching Generators and Instances</h3>
+
+<div id="header"><br>
+Below we present two random graph generators for the bipartite weighted and maximum cardinality matching problems. These generators were developed for benchmarking approximate (weighted) matching algorithms at scale. Their primary design criteria was to allow for a tunable and known solution, to avoid having to exactly solve for the optimal match at a very large scale when evaluating solution quality against each benchmark instance. It is not know exactly how 'interesting' these generated graphs are for traditional solvers, but they are  at least possibly useful for testing solver scalability.
+
+<br><br>
+Modifiable generation parameters depends on the specific generator variant, but typically include methods to vary the number of vertices, sizes of bipartite sets, degree distributions, and cardinalities or weights of the optimal matching solution. Please see the README in each directory linked below for compilation and running instructions.
+
+<br><br>
+The methods have been modified to output in the DIMACS format for the Assignment Problem and Bipartite Matching problems as part of the 13th DIMACS Implementation Challenge. They should easily scale to the limits of 32-bit integers. We include a few large-scale test instances that represent the possible parameter spaces. The methods should also be usable in-memory with little modification to existing application code (as long as the application can handle a basic edgelist).
+
+
+
+<div id="">
+<h3>Assignment Problem Generator and Instances</h3>
+<ul>
+  <li><a href=https://github.com/BenchmarkGraphs/Matching/tree/main/AssignmentProblem> Generator code</a></li>
+  <li><a href=./dimacs/asn_10M_1_28.tar.gz>Test Instance 1A (low-skew-small)</a>: 10M vertices, |X| = |Y|, Degree and weight distribution PL-exponent = 2.8</li>
+  <li><a href=./dimacs/asn_100M_1_28.tar.gz>Test Instance 2A (low-skew)</a>: 100M vertices, |X| = |Y|, Degree and weight distribution PL-exponent = 2.8</li>
+  <li><a href=./dimacs/asn_1B_1_28.tar.gz>Test Instance 3A (low-skew-big)</a>: 1B vertices, |X| = |Y|, Degree and weight distribution PL-exponent = 2.8</li>
+  <li><a href=./dimacs/asn_100M_4_25.tar.gz>Test Instance 4A (medium-skew)</a>: 100M vertices, |X| = 4*|Y|, Degree and weight Degree distribution PL-exponent = 2.5</li>
+  <li><a href=./dimacs/asn_100M_9_22.tar.gz>Test Instance 5 (high-skew)</a>: 100M vertices, |X| = 9*|Y|, Degree and weight distribution PL-exponent = 2.2</li>
+</ul>
+
+<div id="">
+<h3>Bipartite Matching Generator and Instances</h3>
+<ul>
+  <li><a href=https://github.com/BenchmarkGraphs/Matching/tree/main/BipartiteMatching> Generator code</a></li>
+  <li><a href=./dimacs/bp_10M_1_10_28.tar.gz>Test Instance 1B (low-skew-small)</a>: 10M vertices, |X| = |Y|, Max Match = |Y|, Degree distribution PL-exponent = 2.8</li>
+  <li><a href=./dimacs/bp_100M_1_10_28.tar.gz>Test Instance 2B (low-skew)</a>: 100M vertices, |X| = |Y|, Max Match = |Y|, Degree distribution PL-exponent = 2.8</li>
+  <li><a href=./dimacs/bp_1B_1_10_28.tar.gz>Test Instance 3B (low-skew-big)</a>: 1B vertices, |X| = |Y|, Max Match = |Y|, Degree distribution PL-exponent = 2.8</li>
+  <li><a href=./dimacs/bp_100M_4_06_25.tar.gz>Test Instance 4B (medium-skew)</a>: 100M vertices, |X| = 4*|Y|, Max Match = 0.6*|Y|, Degree distribution PL-exponent = 2.5</li>
+  <li><a href=./dimacs/bp_100M_9_03_22.tar.gz>Test Instance 5B (high-skew)</a>: 100M vertices, |X| = 9*|Y|, Max Match = 0.3*|Y|, Degree distribution PL-exponent = 2.2</li>
+</ul
+>
+
+<!-- 
+<div id="">
+<br>
+<strong>Authors and collaborators:</strong> Anthony Fabius, Haven Cook, Ujwal Pandey, S M Ferdous, Sayan Ghosh, Mahantesh Halappanavar, George M Slota
+
+<br><br>
+<strong>Citation:</strong> Fabius, Anthony, Ujwal Pandey, Dong Lin, Yash Kaul, and George M. Slota. Scalable Benchmark Graph Generation for the Maximum Cardinality Matching and Distance-1 Minimum Coloring Problems. In the International Conference on Complex Networks and Their Applications, pp. 318-329. Cham: Springer Nature Switzerland, 2025.
+<br><a href="pub/Random-CNA25.pdf">Paper</a> &nbsp | &nbsp
+<a href="bib/bib_cna2025.bib">BibTeX</a>
+<br> -->
+
+
+</body>
+</html>
